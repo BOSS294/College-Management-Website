@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#"><span class="material-icons">home</span> Home</a></li>
+                <li>
+                    <a href="#"><span class="material-icons">people</span> Students</a>
+                    <ul class="dropdown">
+                        <li><a href="login.html"><span class="material-icons">login</span> Student Login</a></li>
+                        <li><a href="registeration.html"><span class="material-icons">person_add</span> Student Registration</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="material-icons">library_books</span> Courses</a>
+                    <ul class="dropdown">
+                        <li><a href="#"><span class="material-icons">book</span> Courses Offered</a></li>
+                        <li><a href="#"><span class="material-icons">assignment</span> Apply for a Course</a></li>
+                        <li><a href="#"><span class="material-icons">attach_money</span> Course Details & Fee Structure</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="material-icons">info</span> About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="#"><span class="material-icons">school</span> About College</a></li>
+                        <li><a href="#"><span class="material-icons">business</span> About Departments</a></li>
+                        <li><a href="#"><span class="material-icons">people_outline</span> About Faculty</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="material-icons">more_horiz</span> More</a>
+                    <ul class="dropdown">
+                        <li><a href="socialedge.site"><span class="material-icons">code</span> Developer</a></li>
+                        <li><a href="#"><span class="material-icons">gavel</span> Terms & Conditions</a></li>
+                        <li><a href="#"><span class="material-icons">lock</span> Privacy Policy</a></li>
+                        <li><a href="#"><span class="material-icons">get_app</span> Download Source Code</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="registration-form">
+            <h2><span class="material-icons">person_add</span> Register Now</h2>
+            <form id="registerForm" action="register.php" method="POST">
+                <label for="name">Name:</label>
+                <div class="input-container">
+                    <span class="material-icons">person</span>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <label for="email">Email:</label>
+                <div class="input-container">
+                    <span class="material-icons">email</span>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <label for="password">Password:</label>
+                <div class="input-container">
+                    <span class="material-icons">lock</span>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to college <a href="#">Terms & Conditions</a></label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">I agree to college <a href="#">Privacy Policy</a></label>
+                </div>
+                
+                
+                <button type="submit"><span class="material-icons">send</span> Register Now</button>
+                <div id="errorMessages"></div>
+            </form>
+            <div class="login-now">
+                <p>Already have an account? <a href="login.html"> Login Now</a></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 College Student Management</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

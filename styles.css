@@ -1,0 +1,408 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fbfbfbbc;
+}
+/*Navigation*/
+header {
+    background: #ffffff;
+    color: #000000;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid gray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: translateY(-5px);
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav ul li a .material-icons {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li {
+    display: block;
+    margin: 0;
+}
+
+nav ul li .dropdown li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+nav ul li .dropdown li a .material-icons {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+nav ul li .dropdown li a:hover {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: #f4f4f4;
+}
+
+/*Registeration Form*/
+
+.registration-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.registration-form h2 .material-icons {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #333;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.registration-form .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.registration-form .input-container .material-icons {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    color: #999;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.registration-form input:hover {
+    border-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form button:hover {
+    background: #333;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.registration-form button .material-icons {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+#errorMessages {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+.registration-form .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.registration-form .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.registration-form .checkbox-container label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.registration-form .checkbox-container a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px dotted #333;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.registration-form .checkbox-container a:hover {
+    color: #555;
+    border-bottom: 1px solid #555;
+}
+
+/*Footer*/
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 1;
+}
+/*Student Dashboard*/
+.student-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dashboard-item {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    margin-left: 150px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.dashboard-item:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-item .dashboard-icon {
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.dashboard-item .dashboard-content h3 {
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.dashboard-item .dashboard-content p {
+    color: #333;
+}
+
+.dashboard-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dashboard-buttons button {
+    margin: 0 5px;
+    padding: 8px 16px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dashboard-buttons button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/*Media Queries*/
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .student-dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-item {
+        flex-basis: calc(100% - 20px);
+        margin: 10px 0;
+    }
+
+    .dashboard-icon {
+        font-size: 30px;
+    }
+
+    .dashboard-content {
+        text-align: center;
+    }
+
+    .dashboard-buttons {
+        margin-top: 20px;
+    }
+
+    .dashboard-buttons button {
+        margin: 5px 0;
+    }
+}
+/* Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+/* blur effect */
+
+.blur-background {
+    filter: blur(5px);
+    pointer-events: none;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+/*Popups*/
+
+/* Popup container */
+.custom-popup {
+    display: none; /* Hide popup by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow */
+}
+
+/* Popup content */
+.custom-popup .popup-content {
+    color: #fff;
+    text-align: center;
+}
+
+/* Close button */
+.custom-popup .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}
+
+.custom-popup .popup-close:hover {
+    color: #ccc;
+}
+
+/* Add animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loader:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
